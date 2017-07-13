@@ -1,16 +1,19 @@
-# Resume
-My Curriculum Vitae
+## Resume
 
 Extended Deedy-Resume template with header of Friggieri-CV
 
-Compile Stylish with:
+To compile the resume
 
 ``` shell
-  xelatex resume.tex
+  cd resume/
+  ./latex.sh
 ```
 
-Compile Printer Friendly with:
+## CV
 
-``` shell
-  xelatex "\def\cvprint{1} \input{resume.tex}"
+To compile the CV
+
+```shell
+  cd cv/
+  xelatex resume.tex
 ```
