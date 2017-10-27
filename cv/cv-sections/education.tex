@@ -2,31 +2,23 @@
 %   SECTION TITLE
 %----------------------------------------------------------------------------------------
 
-\cvsection{Education}
+\cvsection{Educational Qualifications}
 
-%----------------------------------------------------------------------------------------
-%   SECTION CONTENT
-%----------------------------------------------------------------------------------------
-
-\begin{cventries}
-
-%------------------------------------------------
-
-\cventry
-{Bachelor of Science, Mathematics and Scientific Computing} % Degree
-{Indian Institute of Technology Kanpur} % Institution
-{Kanpur, India} % Location
-{2016 - 2020 (Expected)} % Date(s)
-{% Description(s) bullet points
-\begin{cvitems}
-\item {Cumulative Grade Point /
-    \textbf{CGPA: 7.4/10.0}}
-\end{cvitems}
+\newcommand{\education}[4]{
+  & #1 & #2 & &#3 & #4
 }
-
-\end{cventries}
+\begin{tabular}{ | L{0.02cm} c | L{3cm} | L{0.05cm} C{8cm} | c |}
+  \hline
+  \education{\textbf{Year}}{\textbf{Degree}}{\textbf{Institution(Board)}}{\textbf{CGPA/\%}}\\
+  \hline
+  \education{July'16}{B.S Maths}{Indian Institute of Technology, Kanpur}{7.4/10.0}\\
+  \education{2016}{AISSCE -- XII}{K.V R.K.Puram Sec-2, New Delhi}{94.0\%}\\
+  \education{2014}{AISSE -- X}{K.V R.K.Puram Sec-2, New Delhi}{10/10}\\
+  \hline
+\end{tabular}
 
 %%% Local Variables:
 %%% mode: latex
-%%% TeX-master: "../resume_twopage"
+%%% TeX-master: "../cv"
+%%% TeX-engine: xelatex
 %%% End:
