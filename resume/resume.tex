@@ -32,27 +32,27 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\myheader}[5]{%
   \begin{tikzpicture}[remember picture, overlay]
-    \node (box) at (current page.north) [shape=rectangle, fill=primary, anchor=north, minimum width=\paperwidth, minimum height=105pt] {};
+    \node (box) at (current page.north) [shape=rectangle, fill=primary, anchor=north, minimum width=\paperwidth, minimum height=72pt] {};
     \node (name) at (box) [anchor=south]{%
-      \fontsize{40pt}{60pt}
+      \fontsize{30pt}{40pt}
       \color{white}
       \fontspec[Path = fonts/lato/]{Lato-Hai}\selectfont #1
       \fontspec[Path = fonts/lato/]{Lato-Lig}\selectfont #2
     };
     \node (lineone) at (name.south) [anchor=north]{%
       \color{white}
-      \fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{9pt}{12pt}\selectfont #3
+      \fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{8pt}{8pt}\selectfont #3
     };
     \node (linetwo) at (lineone.south) [anchor=north] {%
       \color{white}
-      \fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{14pt}\selectfont #4
+      \fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{9pt}{8pt}\selectfont #4
     };
     \node (linethree) at (linetwo.south) [anchor=north] {%
       \color{white}
       \fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{14pt}\selectfont #5
     };
   \end{tikzpicture}%
-  \vspace{60pt}
+  \vspace{50pt}
  }
 
 \ifdefined\cvprint
@@ -68,13 +68,13 @@
 }
 \else
   \myheader{Aniket}{Pandey}{Second Year Undergraduate \textbullet{} Mathematics and Scientific Computing}{%
-    \faGlobe\enspace\urlstyle{same}\href{http://aniketpandey.com}{www.aniketpandey.com}%
+    \faGlobe\enspace\urlstyle{same}\href{http://aniketpandey.com}{aniketpandey.com}%
     \enspace| \enspace%
     \faEnvelopeO\enspace\href{mailto:aniketp@iitk.ac.in}{aniketp@iitk.ac.in}
-  }{%
+    \enspace| \enspace%
     \faGithubAlt\enspace\href{https://github.com/aniketp41}{aniketp41}%
     \enspace| \enspace%
-    \faLinkedin\enspace\href{https://www.linkedin.com/in/aniketp41}{aniketp41}
+    \faPhone\enspace{+91-959-988-1876}
   }
 \fi
 
@@ -84,12 +84,12 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{minipage}[t]{0.31\textwidth} 
+\begin{minipage}[t]{0.30\textwidth} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     EDUCATION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\vspace{-0.5cm}
 \section{Education} 
 
 \subsection{IIT Kanpur}
@@ -111,16 +111,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Relevant Courses}
-Data Structures and Algorithms (\textit{i}) \\
-Discrete Mathematics (\textit{i}) \\
+Computer Systems Security (\textit{i}) \\
+Data Structures \& Algorithms (\textit{i}) \\
 Introduction to Programming \\
-Intro to Machine Learning (\textit{m}) \\
-Set Theory \& Mathematical Logic \\
-Linear Algebra \& Differential Eqns. \\
-Introduction to Analysis \\
+Probability \& Statistics (\textit{i}) \\
+Linear \& Abstract Algebra (\textit{i}) \\
+Discrete Mathematics \\
+Set theory \& Mathematical Logic \\
+Real Analysis \& Differential Eqns. \\
 Introduction to Electronics
 
-{\footnotesize \textit{\textbf{ (i : Ongoing Courses | m : Online Courses)}}}
+{\footnotesize \textit{\textbf{ (i : Ongoing Courses)}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     SKILLS
@@ -128,35 +129,39 @@ Introduction to Electronics
 
 \section{Skills}
 \subsection{Programming}
-Python \textbullet{} Javascript \textbullet{} C \textbullet{} C++ \\
-CSS \textbullet{} Typescript \textbullet{} Shell \\
+Python \textbullet{} C \textbullet{} C++ \textbullet{} Typescript \\
+PHP \textbullet{} SQL \textbullet{} Javascript \textbullet{}  Shell \\
  \vspace{0.1 cm}
 \location{Familiar:}
- Java \textbullet{} SQL \textbullet{} Haskell \\
-\vspace{0.3 cm} 
+ Java \textbullet{} Perl \textbullet{} Lua \textbullet{} Haskell \\
+\vspace{0.4 cm} 
 \subsection{Web/Frameworks}
-Django* \textbullet{} Angular \textbullet{} Bootstrap \\
-Express.js with Node.js \\
+Django* \textbullet{} Full MEAN Stack \\
+LAMP Stack \textbullet{} Codeigniter \\
 {\footnotesize \textit{\textbf{ (* : Proficient)}}}
-\vspace{0.3 cm}
+\vspace{0.4 cm}
 \subsection{Operating Systems}
-Linux Mint \textbullet{} Arch Linux \textbullet{} Ubuntu \\
-Kali Linux \textbullet{} Microsoft Windows
-\vspace{0.3 cm}
+Kali Linux \textbullet{} Arch Linux \textbullet{} Ubuntu \\
+Linux Mint \textbullet{} Microsoft Windows
+\vspace{0.4 cm}
 \subsection{Utilities}
 Docker \textbullet{} MongoDB \textbullet{} \LaTeX{} \textbullet{} Vim \\
-Git \textbullet{} Aircrack-ng \textbullet{} Wireshark \\
-Linux Shell Utitlities
-% MongoDB \textbullet{} OpenCV \textbullet{} nginx \\
-
+Git \textbullet{} GDB \textbullet{} Linux Shell Utitlities \\
+phpMyAdmin \textbullet{} Xampp
+\vspace{0.4 cm}
+\subsection{VAPT Tools}
+Metasploit \textbullet{} Wireshark \textbullet{} Nmap \\
+Burpsuite \textbullet{} Sqlmap \textbullet{} Aircrack-ng \\
+Ettercap \textbullet{} Xerosploit \textbullet{} Hashcat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     Interests
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Interests}
 System Administration \textbullet{}Open Source \\
-Web Development \textbullet{} Wireless Security \\
-Python/Shell Scripting  \textbullet{} Cryptography\\
+Web Development \textbullet{} Cyber Security \\
+Python/Shell Scripting  \textbullet{} Cryptography \\
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %     COLUMN TWO
@@ -165,55 +170,73 @@ Python/Shell Scripting  \textbullet{} Cryptography\\
 
 \end{minipage} 
 \hfill
-\begin{minipage}[t]{0.69\textwidth} 
+\begin{minipage}[t]{0.70\textwidth} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     EXPERIENCE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\vspace{-0.7cm}
 \section{Experience and Projects}
+\runsubsection{Security Analyst Intern}
+\descript{| Nov'17 - Jan'18}
+\location{Lucideus Technologies, New-Delhi}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+  \item Developed and deployed a secure social networking platform in LAMP Stack. 
+  \item Assessed its vulnerability against OWASP top 10 attacks and improved the security.
+  \item Extensively used VAPT tools like Metasploit, Wireshark, Xerosploit, Nessus, Maltego.
+  \item	Researched cyptographical model implementation in Network \& Wireless Security, analysed WEP encryption weaknesses and exloited it using aircrack-ng tool suite.
+  \item Reverse engineered Windows applications to mitigate common security flaws.
+\end{tightemize}
+
+
 \runsubsection{Gymkhana Nomination Portal}
 \descript{| May'17 - July'17}
 \location{Summer Project , Programming Club}
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\vspace{0cm} % Hacky fix for awkward extra vertical spac
 \begin{tightemize}
-  \item Developed a scalable web application for nominations of various posts of Gymkhana, IITK
-  \item Used Django along with Django-Rest-Framework and PostgreSQL for developing the portal
-  \item	Implemented dynamic heirarchy levels, search feature, django-filter and multiple model versioning in the backend API \\
-  \item Designed a Responsive User Interface from scratch using Bootstrap and jQuery
+  \item Developed a scalable web application for nominations of Students' Gymkhana, IITK.
+  \item Used Django along with Django-Rest-Framework and PostgreSQL database.
+  \item	Implemented dynamic heirarchy levels, search feature, django-filter and multiple model versioning in the backend API, extended it to include automated emailing. \\
+  \item Created custom user authentication backend with Django SMTP integration.
 \end{tightemize}
 
 \runsubsection{Senior Web Executive}
-\descript{| April'17 - March'18}
+\descript{| Apr'17 - Mar'18}
 \location{Stamatics, Departmental Association }
 %\vspace{\topsep}
 \begin{tightemize}
-  \item Developed and deployed the responsive website of Stamatics in \textbf{Angular} with a custom domain name \href{http://stamatics.org}{\textit{stamatics.org}}
-  \item Dockerized the site and maintained the backend with real-time databasing
+  \item Developed and deployed the website of Stamatics in Angular (\href{http://stamatics.org}{\textit{stamatics.org}})
+  \item Dockerized the site and maintained the backend with real-time databasing.
 \end{tightemize}
 \location{Antaragni'17 \& Techkriti'18}
 %\vspace{\topsep}
 \begin{tightemize}
-  \item Used the full MEAN Stack for a fest registration portal, dynamic website
-    and its admin control panel
-  \item Technologies Used - NodeJS, AngularJS, MongoDB, ExpressJS and more
+  \item Used the full MEAN Stack for a fest registration portal and its admin control panel
+  \item Technologies Used - NodeJS, ExpressJS, Angular4, MongoDB (full Typescript)
 \end{tightemize}
 
 \runsubsection{Computational Complexity Theory}
-\descript{| $2^{nd}$ Semester }
-\location{ACA Semester Project}
+\descript{| Feb'17 - May'17 }
+\location{ACA Project under Prof. Rajat Mittal}
 \begin{tightemize}
-  \item Reading Project on Theory of Computation. Studied about non-deterministic complexity classes eg. NP, NP-Complete, NP-Hard
+  \item Reading Project on Theory of Computation, Complexity Classes \& Cryptography.
   \item Researched the fundamental working of \textbf{Turing Machine} and its properties
-  \item Analyzed famous NP-Complete problems, e.g SAT, Hamiltonian Path, Travelling Salesman etc 
-%  \item Understood the implication of Complexity Theory in Quantum Computing and Cryptography.
-%  \item Prepared the final report in \LaTeX{} which is now under examination. 
+  \item Analyzed famous NP-Complete problems, e.g Hamiltonian Path, Travelling Salesman  
+\end{tightemize}
+
+\runsubsection{Graph Theory \& Algorithms}
+\descript{| Oct'17 - Dec'17 }
+\location{Stamatics Project under Prof. Amit Kuber}
+\begin{tightemize}
+  \item Research project on analyzing various Graph algorithms and their complexities.
+  \item Investigated famous algorithms like BFS, DFS, Dijkstra \& Bellman-Ford.
 \end{tightemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     AWARDS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\vspace{-0.3cm}
 \section{Awards and Achievements} 
 \begin{tabular}{rll}
   2014	   & \textbf{AIR 1}  & KVS Junior Mathematics Olympiad, with a record score of \textbf{92}/100 \\
@@ -234,22 +257,22 @@ Python/Shell Scripting  \textbullet{} Cryptography\\
 \location{Secretary, Programming Club}
 \vspace{0 mm}
 \begin{tightemize}
-    \item Organized a lecture on Python and Web-Scraping for peer students
-    \item Helped install various distos of Linux in students' laptops during Linux Install Fest
-    \item Among the select freshers to complete Programming Club's \textit{Getting first PR merged} challenge 
+    \item Organized an introductory lecture on Python and Web-Scraping for peer students.
+    \item Helped install various distos of Linux in students' laptops during Linux Install Fest.
+    \item Prepared recruitment test questions and introductory blogs for Fresher students. 
 \end{tightemize}
 
 \location{Hall Captain, Takneek 2017}
 \begin{tightemize}
-    \item Led the pool to victory in the Inter-hostel technical competition, \textit{Takneek}
-    \item Also won the maiden trophy of Astronomy and Programming
+    \item Led the pool to victory in the Inter-hostel technical competition, \textit{Takneek}.
+    \item Also won the maiden trophies of Astronomy and Programming.
 \end{tightemize}
 
 \location{Hobbies/Citations/PORs}
 \begin{tightemize}
     \item Secretary of \textit{Programming Club}, \textit{Astronomy Club} \& \textit{Rubik's Cube Hobby Group}
     \item Cited in The Journal of Open Source Software(JOSS) for contributing to Astropy\textsuperscript{\texttrademark}
-    \item Maintain a blog (\textit{\href{http://aniketpandey.com/homepage}{link}}) about Linux, Programming and VCS
+    \item Maintain a blog at aniketpandey.com (\textit{\href{http://aniketpandey.com/homepage}{link}}) about Linux, Programming and VCS
 \end{tightemize}
 
 \end{minipage} 
