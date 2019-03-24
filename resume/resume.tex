@@ -13,16 +13,20 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[]{deedy-resume-openfont}
+\documentclass[10pt, margin=0.5in]{deedy-resume-openfont}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{fontspec}
+\usepackage{enumitem}
 \usepackage{fontawesome}
+\usepackage{lipsum}
 \usepackage{tikz}
 \usepackage{tikzpagenodes}
 
 \pagestyle{fancy}
 \fancyhf{}
+
+\setlist{nolistsep}
 
 \begin{document}
 
@@ -33,32 +37,32 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\myheader}[5]{%
   \begin{tikzpicture}[remember picture, overlay]
-    \node (box) at (current page.north) [shape=rectangle, fill=primary, anchor=north, minimum width=\paperwidth, minimum height=72pt] {};
+    \node (box) at (current page.north) [shape=rectangle, fill=none, anchor=north, minimum width=\paperwidth, minimum height=72pt] {};
     \node (name) at (box) [anchor=south]{%
       \fontsize{30pt}{40pt}
-      \color{white}
+      \color{black}
       \fontspec[Path = fonts/lato/]{Lato-Hai}\selectfont #1
       \fontspec[Path = fonts/lato/]{Lato-Lig}\selectfont #2
     };
     \node (lineone) at (name.south) [anchor=north]{%
-      \color{white}
+      \color{black}
       \fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{9pt}{8pt}\selectfont #3
     };
     \node (linetwo) at (lineone.south) [anchor=north] {%
-      \color{white}
+      \color{black}
       \fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{9pt}{8pt}\selectfont #4
     };
     \node (linethree) at (linetwo.south) [anchor=north] {%
-      \color{white}
+      \color{black}
       \fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{14pt}\selectfont #5
     };
-  \end{tikzpicture}%
-  \vspace{50pt}
+  \end{tikzpicture}
+  \vspace{50pt} 
  }
 
 \ifdefined\cvprint
-\namesection{Aniket}{Pandey}{%
-  Third Year Undergraduate \textbullet{} Mathematics and Scientific Computing \\ \vspace{5pt}
+  \namesection{Aniket}{Pandey}{%
+  Third Year Undergraduate \textbullet{} Mathematics and Scientific Computing \\
   \faGlobe\enspace\urlstyle{same}\href{http://aniketpandey.com}{aniketpandey.com}%
   \enspace| \enspace%
   \faEnvelopeO\enspace\href{mailto:aniketp@iitk.ac.in}{aniketp@freebsd.org}%
@@ -68,6 +72,7 @@
   \faLinkedin\enspace\href{https://www.linkedin.com/in/aniketp41}{aniketp41}
 }
 \else
+%	\vspace{-4cm}
   \myheader{Aniket}{Pandey}{Third Year Undergraduate \textbullet{} Mathematics and Scientific Computing}{%
     \faGlobe\enspace\urlstyle{same}\href{http://aniketpandey.com}{aniketpandey.com}%
     \enspace| \enspace%
@@ -76,103 +81,89 @@
     \faGithubAlt\enspace\href{https://github.com/aniketp}{aniketp}%
     \enspace| \enspace%
     \faPhone\enspace{+91-959-988-1876}
+%    
   }
 \fi
 
+\vspace{-21pt}
+\rule{\textwidth}{1pt}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %     COLUMN ONE
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{minipage}[t]{0.30\textwidth}
+\begin{minipage}[t]{0.47\textwidth}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     EDUCATION
+%     PROJECTS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{-0.5cm}
-\section{Education}
 
-\subsection{IIT Kanpur, India}
-\descript{B.S in Mathematics and Scientific Computing}
+\vspace{-8pt}
+\section{Education Details}
+\subsection{Indian Institute of Technology, Kanpur}
+\descript{B.S in Mathematics and Scientific Computing\\Minor in Computer Systems}
 \location{July 2016-2020 (expected)} 
-\sectionsep{}
 
-\subsection{K.V R.K.Puram, Sec-2}
-\descript{AISSCE, CBSE, Overall: \textbf{94.0\%}}
-\location{May 2016 | New Delhi, India}
-\sectionsep{}
-%
-%\subsection{K.V R.K.Puram, Sec-2}
-%\descript{AISSE, CBSE: \textbf{10 CGPA}}
-%\location{May 2014 |  New Delhi, India}
+\section{Relevant Projects}
+\runsubsection{Google Summer of Code'18}
+\descript{\hfill \textit{Apr'18 - Aug'18}}
+\location{The FreeBSD Project \hfill \textit{Dr. Robert Watson}}
+\begin{itemize}[leftmargin=*, noitemsep]
+\item Built a self-contained Regression Test-Suite for FreeBSD's Audit Subsystem with a cross-platform support for Darwin OS and x86, ARM, Sparc64, MIPS architectures.
+  \item Contributed \textbf{500+} test-cases for \textbf{180} auditable system calls.
+  \item Developed an automation infrastructure for the Test-Suite, which synchronously polls on a clonable special device, /dev/auditpipe, to extract out relevant BSM tokens.
+  \item	Completed the proposed work in \textbf{less than 1/3rd} of total duration. Entire Test-Suite with \textbf{9000+ SLOC} count was pushed to 12-CURRENT production branch. (\href{https://github.com/freebsd/freebsd/tree/master/tests/sys/audit}{\textbf{LINK}})
+\end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     COURSEWORK
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{5pt}
+\runsubsection{The University of Texas at Dallas}
+\descript{\hfill \textit{May'18 - Jul'18}}
+\location{Summer Research Intern \hfill \textit{Prof. Latifur Khan}}
 
-\section{Relevant Courses}
-Operating Systems \\
-Computer Networks \\ 
-Data Structures \& Algorithms \\
-Computer Architecture (\textit{i}) \\
-Computer Systems Security (\textit{i})  \\
-Designing Verifiably Secure Systems \\
-Introduction to Programming \\
-Probability \& Statistics \\
-Introduction to Electronics \\
+\begin{itemize}[leftmargin=*, noitemsep]
+  \item Research project on the implementation of Cross-Domain Adaptive Framework for Multistream data classification \textbf{(COMC)} in asynchronous data stream mining.
+  \item Worked on performance benchmarking of an Entity extraction and Geoparser tool, CLIFF-CLAVIN, in its ability to handle multiple concurrent requests. Performance analysis was carried out on a scalable cloud environment, \textbf{JetStream}.
+\end{itemize}
 
+\vspace{-3pt}				%
+\rule{\textwidth}{0.5pt}	% THESE LINES DON'T MAKE SENSE, BUT THEY WORK	
+\vspace{-7pt}				%
 
-{\footnotesize \textit{\textbf{ (i : Ongoing Courses)}}}
+\runsubsection{Secure Key-Value File Sharing}
+\descript{\hfill \textit{Jan'19 - Apr'19}}
+\location{\textit{Computer Systems Security \hfill Prof. Pramod Subramanyan}}
+\begin{itemize}[leftmargin=*, noitemsep]
+  \item Developed an encrypted dropbox-like platform in \textbf{Golang}.
+  \item Implemented transitive and anonymous collaboration using AES-CFB, HMAC, RSA based encryption and Argon2 PBKDF.
+\end{itemize}
 
+\vspace{5pt}
+\runsubsection{GemOS: x86 Operating System}
+\descript{\hfill \textit{Aug'18 - Nov'18}}
+\location{\textit{OS Course Project \hfill Prof. Debadatta Mishra}}
+\begin{itemize}[leftmargin=*, noitemsep]
+  \item Built a \textbf{Gem5} simulated x86 operating system with support for context switching, system calls, multithreading, interrupt handlers, RPC and Round-Robin Scheduling of processes.
+  \item Developed an object-store \textbf{FUSE} filesystem with LRU cache.
+\end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     Interests
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{0.2cm}
-\section{Achievements}
-\vspace{0.1cm}
-\textbf{AIR 1}: FIITJEE FTRE'13, \textbf{214/214}\\
-\vspace{0.1cm}
-\textbf{AIR 1}: KVS-JMO'14. Scored \textbf{92/100}\\
-\vspace{0.1cm}
-\textbf{AIR 244}: KVPY, Sponsered by IISc \\
-\vspace{0.1cm}
-\textbf{AIR 908}: JEE Advanced 2016\\
-\vspace{0.1cm}
-Qualified \textbf{RMO}'13 from Delhi region\\
-\vspace{0.1cm}
-Merit in Indian National Astrophysics Olympiad, \textbf{thrice}: \textbf{INAO}-14,15,16 \\
-\vspace{0.1cm}
-Merit in Indian National Junior Science Olympiad: \textbf{INJSO}-2014 \\
+\vspace{5pt}
+\runsubsection{Formal Verification of Intel's SGX}
+\descript{\hfill \textit{Aug'18 - Nov'18}}
+\location{\textit{Verifiable Secure Systems \hfill Prof. Pramod Subramanyan}}
+\begin{itemize}[leftmargin=*, noitemsep]
+  \item Researched on modelling a formal verification of a password manager using Intel's Software Guard Extensions Enclave.
+  \item Implemented the Rjindael \textbf{AES-GCM} 128-bit encryption.
+\end{itemize}
 
-{\footnotesize \textit{\textbf{ (AIR : All India Rank)}}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     SKILLS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Relevant Skills}
-\subsection{Programming}
-\location{Competent:}
-C \textbullet{} C++ \textbullet{} Python \textbullet{} Golang \\
- \vspace{0.1 cm}
-\location{Familiar}
-Bash \textbullet{} Javascript \textbullet{} Haskell \\
-\vspace{0.4 cm}
-\subsection{Operating Systems}
-FreeBSD \textbullet{} Arch Linux \textbullet{} Ubuntu \\
-Kali Linux \textbullet{} NetBSD \textbullet{} Gentoo
-\vspace{0.4 cm}
-\subsection{Web/Frameworks}
-Django \textbullet{} Full MEAN Stack \\
-Full LAMP Stack \textbullet{} Codeigniter \\
-\vspace{0.4 cm}
-\subsection{Utilities}
-Docker \textbullet{} DTrace \textbullet{} \LaTeX{} \textbullet{} Vim \\
-Git \textbullet{} GDB \textbullet{} Linux Shell Utilities \\
-Kubernetes 
-
+\vspace{5pt}
+\runsubsection{Computational Complexity Theory}
+\descript{\hfill \textit{Jan'17 - Mar'17}}
+\location{\textit{ACA Semester Project \hfill Prof. Rajat Mittal}}
+\begin{itemize}[leftmargin=*, noitemsep]
+  \item Explored the fundamental working of Turing Machine.	
+  \item Analyzed the solutions of famous NP-Complete problems.
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -182,177 +173,111 @@ Kubernetes
 
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.70\textwidth}
+\begin{minipage}[t]{0.48\textwidth}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     EXPERIENCE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{-0.5cm}
+\vspace{-8pt}
 \section{Work Experience}
-\runsubsection{Google Summer of Code'18}
-\descript{| Apr'18 - Aug'18}
-\location{The FreeBSD Project | Mentor: Dr. Robert N. M. Watson}
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
-\begin{tightemize}
-\item Built a self-contained Regression Test-Suite for FreeBSD's Audit Subsystem with a cross-platform support for Darwin OS and x86, ARM, Sparc64, MIPS architectures.
-  \item Contributed more than \textbf{500} test-cases for \textbf{180} OpenBSM auditable system calls.
-  \item Developed an automation infrastructure for the Test-Suite, which synchronously polls on a clonable special device, /dev/auditpipe, to extract out relevant BSM tokens.
-  \item	Completed the proposed work in less than 1/3rd of total duration. Entire Test-Suite with \textbf{9000+ SLOC} count was pushed to 12-CURRENT production branch. (\href{https://github.com/freebsd/freebsd/tree/master/tests/sys/audit}{\textbf{LINK}})
-\end{tightemize}
 
-\vspace{0.1cm}
+\runsubsection{Software Engineering Intern}
+\descript{\hfill \textit{May'19 - Jul'19}}
+\location{Cohesity Inc.}
+\begin{itemize}[leftmargin=*, noitemsep]
+  \item \lipsum[66]
+\end{itemize}
+
+\vspace{5pt}
 \runsubsection{Security Analyst Intern}
-\descript{| Nov'17 - Jan'18}
-\location{Lucideus Technologies | Project Manager: Saket Modi, CEO}
-\vspace{0cm} % Hacky fix for awkward extra vertical space
-\begin{tightemize}
-  \item Developed and deployed a secure social networking platform in LAMP Stack.
-  \item Assessed its vulnerability against OWASP top 10 attacks and improved the security.
+\descript{\hfill \textit{Nov'17 - Jan'18}}
+\location{Lucideus Technologies}
+\begin{itemize}[leftmargin=*, noitemsep]
+  \item Built a secure social networking platform in LAMP Stack.
+  \item Assessed the application's vulnerability against OWASP top 10 attacks and improved the feature security.
   \item Extensively used VAPT tools like Metasploit, Wireshark, Xerosploit, Nessus, Maltego.
   \item	Researched cryptographical model implementation in Network \& Wireless Security, analysed WEP encryption weaknesses and exploited it using aircrack-ng tool suite.
-  \item Reverse engineered Windows applications to mitigate common security flaws.
-\end{tightemize}
+  \item Reverse engineered common Windows applications.
+\end{itemize}
 
 
-
-\vspace{0.1cm}
-\runsubsection{Full Stack Developer Intern}
-\descript{| Feb'18 - May'18}
-\location{IIT Kanpur - NYC Office | Prof. Manindra Agarwal}
-\vspace{0cm} % Hacky fix for awkward extra vertical space
-\begin{tightemize}
+\vspace{5pt}
+\runsubsection{New York Office, IIT Kanpur}
+\descript{\hfill \textit{Nov'17 - May'18}}
+\location{\textit{Backend Developer Intern \hfill Prof. Manindra Agarwal}}
+\begin{itemize}[leftmargin=*, noitemsep]
   \item Worked on a scalable polyglot web application with an extensive technology stack.
   \item Implemented real-time status update feature in the attendance management system.
-  \item Technologies used: DRF, Kubernetes, Elasticsearch, Concourse-CI, Spinnaker etc.
-\end{tightemize}
+  \item Technologies used: DRF, Kubernetes, Elasticsearch.
+\end{itemize}
 
-\vspace{0.1cm}
-\runsubsection{Senior Executive, Web Team}
-\descript{| Apr'17 - Mar'18}
-\location{Stamatics Association, IIT Kanpur}
-%\vspace{\topsep}
-\begin{tightemize}
-  \item Developed and deployed the website of Stamatics in Angular (\href{http://stamatics.org}{\textit{stamatics.org}})
-  \item Dockerized the site and maintained the backend with real-time databasing.
-\end{tightemize}
-\location{Antaragni 2018, IIT Kanpur}
-%\vspace{\topsep}
-\begin{tightemize}
-  \item Used the full MEAN Stack for a fest registration portal and its admin control panel
-  \item Technologies Used - NodeJS, ExpressJS, Angular4, MongoDB (full Typescript).
-\end{tightemize}
+\vspace{2pt}				%
+\rule{\textwidth}{0.5pt}	% THESE LINES DON'T MAKE SENSE, BUT THEY WORK	
+\vspace{-14pt}				%
 
-
-\section{Projects \& Activities}
-
-
-\runsubsection{Formal Verification of Intel's SGX}
-\descript{| Jul'18 - Nov'18 }
-\location{Course Project : Designing Verifiably Secure Systems}
-\begin{tightemize}
-  \item Developed a password manager using Intel's Software Guard Extensions Enclave.
-  \item Researched on modelling a formal verification of security features of the application.
-  \item Implemented the Rjindael AES-128 bit enclave encryption in Galois/Counter Mode.
-\end{tightemize}
-
-%\vspace{0.1cm}
-%\runsubsection{Computer Architecture Summer School}
-%\descript{| July'18}
-%\location{Sponsered by AMD \& Intel | Prof. Biswabandan Panda}
-%\vspace{0cm} % Hacky fix for awkward extra vertical space
-%\begin{tightemize}
-%\item Analyzed Cache performance and DRAM access patterns of a multicore CPU using trace based architecture simulators like Gem5 and ChampSim, considering various benchmark metrics for Out of Order processing, Branch predictors \& ROB size.
-%  \item Observed the effect of hugepages on TLB misses in a stimulated virtual memory.
-%  \item Compared the performance benchmark of various multithreaded and shared memory matrix manipulation programs written using OpenMP, MPI \& CUDA APIs.
-%\end{tightemize}
-
-\vspace{0.1cm}
-\runsubsection{Research Track Exploration}
-\descript{| May'18 - July'18}
-\location{The University of Texas at Dallas | Prof. Latifur Khan}
-\vspace{0cm} % Hacky fix for awkward extra vertical space
-\begin{tightemize}
-  \item Research project on the implementation of Cross-Domain Adaptive Framework for Multistream data classification (COMC) in asynchronous data stream mining.
-  \item Worked on performance benchmarking of an Entity extraction and Geoparser tool, CLIFF-CLAVIN, in its ability to handle multiple concurrent requests. Performance analysis was carried out on Jetstream, a scalable cloud environment for XSEDE.
-\end{tightemize}
-
-\vspace{0.1cm}
-\runsubsection{Automated Nominations Web-Portal}
-\descript{| May'17 - July'17}
-\location{Summer Project | Students' Gymkhana, IIT Kanpur }
-\vspace{0cm} % Hacky fix for awkward extra vertical spac
-\begin{tightemize}
-  \item Developed a scalable web application for nominations of Students' Gymkhana, IITK.
-  \item Used Django along with Django-Rest-Framework and PostgreSQL database.
-  \item	Implemented dynamic heirarchy levels, search feature, django-filter and multiple model versioning in the backend API, extended it to include automated emailing.
-  \item	Selected among the \textbf{top 6} projects from all SnT clubs to give final presentation.
-\end{tightemize}
-
-%\vspace{0.1cm}
-%\runsubsection{Graph Theory And Algorithms}
-%\descript{| Sep'17 - Oct'17 }
-%\location{Stamatics Departmental Association | Prof. Amit Kuber}
-%\begin{tightemize}
-%  \item Researched about Graph traversal and Single Source Shortest Path algorithms.
-%  \item Worked on improving the algorithms for finding singly connected components.
-%\end{tightemize}
 %
-%\vspace{0.1cm}
-%\runsubsection{Computational Complexity Theory}
-%\descript{| Feb'17 - Apr'17 }
-%\location{Association of Computing Activities | Prof. Rajat Mittal}
-%\begin{tightemize}
-%  \item Research Project on Theory of Computation, Complexity Classes \& Cryptography.
-%  \item Explored the fundamental working of Turing Machine and its various properties.
-%%  \item Analyzed famous NP-Complete problems, e.g. Hamiltonian Path, Travelling Salesman
-%\end{tightemize}
-
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     AWARDS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\section{Awards and Achievements}
-%\begin{tabular}{rll}
-  %2014	   & \textbf{AIR 1}  & KVS Junior Mathematics Olympiad, with a record score of \textbf{92}/100 \\
-  %2014	   & \textbf{AIR 244}& KVPY-SA Fellowship Examination, IISc Bangalore \\
-  %2016     & \textbf{AIR 908}& JEE Advanced 2016, conducted by IT-Guwahati \\
-  %2013	    & \textbf{RMO}     & Qualified Regional Mathematics Olympiad from Delhi Region \\
-  %2014	    & \textbf{INJSO}   & Amongst the top \textbf{36} merit students selected in Junior Science Olympiad   \\
-  %2015      & \textbf{INAO-Sr} & Amongst the top \textbf{25} merit students selected in Astrophysics Olympiad.
-%\end{tabular}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%     MISCELLANEOUS
+%%     SKILLS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%\section{Miscellaneous}
-%
-%\location{Secretary, Programming Club}
-%\vspace{0 mm}
-%\begin{tightemize}
-%    \item Organized an introductory lecture on Python and Web-Scraping for peer students.
-%    \item Helped install various distos of Linux in students' laptops during Linux Install Fest.
-%    \item Prepared recruitment test questions and introductory blogs for Fresher students.
-%\end{tightemize}
+\section{Relevant Skills}
+\vspace{0pt}
+\begin{tabular}{ll}
+ \textbf{Competent}  & C, C++, Golang, Python \\
+ \textbf{Familiar}   & TypeScript, Haskell, Lua, Perl \\
+ \textbf{Web Tech}   & Django, REST, MEAN, LAMP \\
+ \textbf{Utilities}  & Shell Utilities, Git, Docker \LaTeX, Vim
+% \textbf{Systems}    & GDB, DTrace, FreeBSD, Capsicum
+\end{tabular}
 
-%\location{Hall Captain, Takneek 2017}
-%\begin{tightemize}
-%    \item Led the pool to victory in the Inter-hostel technical competition, \textit{Takneek}.
-%    \item Also won the maiden trophies of Astronomy and Programming.
-%\end{tightemize}
+
 %
-%\location{Hobbies/Citations/PORs}
-%\begin{tightemize}
-%    \item Secretary of \textit{Programming Club}, \textit{Astronomy Club} \& \textit{Rubik's Cube Hobby Group}
-%    \item Cited in The Journal of Open Source Software(JOSS) for contributing to Astropy\textsuperscript{\texttrademark}
-%    \item Maintain a blog at aniketpandey.com (\textit{\href{http://aniketpandey.com/homepage}{link}}) about Linux, Programming and VCS
-%\end{tightemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Scholastic Achievements
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\section{Scholastic Achievements}
+\vspace{0pt}
+\begin{tabular}{lll}
+  2014	   & \textbf{AIR 1}  & KVS Junior Mathematics Olympiad\\
+  2014	   & \textbf{AIR 244}& KVPY-SA Fellowship, IISc Bangalore \\
+  2016     & \textbf{AIR 908}& JEE Advanced 2016, IIT Guwahati \\
+\end{tabular}
+
+\vspace{5pt}				%
+\rule{\textwidth}{0.5pt}	% THESE LINES DON'T MAKE SENSE, BUT THEY WORK	
+\vspace{-14pt}				%
+
+\section{Position of Responsibility}
+\runsubsection{Senior Executive, Web Team}	
+\descript{\hfill \textit{Apr'17 - Mar'18}}	
+\location{Stamatics Association, IIT Kanpur}	
+\begin{itemize}[leftmargin=*, noitemsep]
+  \item Developed and deployed the website of Stamatics in Angular.
+  \item Dockerized the site and maintained real-time backend.	
+\end{itemize}	
+\location{Antaragni 2018, IIT Kanpur}		
+\begin{itemize}[leftmargin=*, noitemsep]
+  \item Used the full MEAN Stack for a fest registration portal and its admin control panel	
+  \item Technologies Used - NodeJS, ExpressJS, Angular4, MongoDB.	
+\end{itemize}
 
 \end{minipage}
-\end{document}  \documentclass[]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{4pt}				%
+\rule{\textwidth}{0.5pt}	% THESE LINES DON'T MAKE SENSE, BUT THEY WORK	
+\vspace{-18pt}				%
+
+\section{\hspace{0.5cm}Relevant Courses}
+\hspace{-6pt} \begin{tabular*}{\textwidth}{lllll}
+ Data Structures and Algorithms & Operating Systems & Computer Networks & Computer Architecture \textit{(s)} & Distributed Systems \textit{(i)} \\
+ Computer Systems Security \textit{(i)} & Abstract Algebra & Regression Analysis \textit{(i)} & Probability \& Statistics &  Scientific Computing \textit{(i)}
+\end{tabular*}
+
+
+% HAcky Fix
+\hspace{-2pt} {\footnotesize \textit{\textbf{ (i : Ongoing Courses)}} | \textit{\textbf{ (s : Summer School)}}}
+\end{document}
