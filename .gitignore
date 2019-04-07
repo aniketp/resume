@@ -7,3 +7,5 @@ resume/resume.synctex.gz
 cv/resume_twopage.out
 cv/resume_twopage.aux
 cv/resume_twopage.log
+*.fdb_latexmk
+*.fls
