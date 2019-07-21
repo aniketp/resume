@@ -185,15 +185,16 @@
 \descript{\hfill \textit{May'19 - Jul'19}}
 \location{Cohesity Inc.}
 \begin{itemize}[leftmargin=*, noitemsep]
-  \item Created a parser for a log-structured distributed database to tokenize
-      Office 365 backups as key-value byte streams.
-  \item Reconstructed the SMTP Headers from the deserialized RocksDB dump to
-      ZeroCopyBuffers using \textbf{C++ protobufs}.
-  \item Developed a library to generate PST and EML format from parsed tokens
-      using internal file-system interface over POSIX.
-  \item Used MFCMAPI and libpst to create \textbf{BTree-on-Heap},
-      \textbf{Heap-on-Nodes} and bitmap structures while generating PST.
-  \item Feature integrated with Company's backup-indexing engine.
+  \item Created a parser for a log-structured distributed database to serialize
+	Office 365 backups to a copy-free contiguous buffer.
+  \item Developed a library to reverse engineer exported EWS stream, tokenize SMTP
+	headers and generate EML files from scratch.
+  \item Integrated end-to-end workflow of parsing and recovering Outlook Emails
+	with the company's backup indexing engine.
+  \item Nominated as the \textbf{Best Intern Project} for providing an innovative
+	solution to a business critical requirement.
+  \item \textbf{Exposure}: C++, Golang \textbf{(2400+ SLOC)}, protobufs, RocksDB.
+
 \end{itemize}
 
 \vspace{5pt}
@@ -266,7 +267,7 @@
 \end{itemize}	
 \location{Antaragni 2018, IIT Kanpur}		
 \begin{itemize}[leftmargin=*, noitemsep]
-  \item Used the full MEAN Stack for a fest registration portal and its admin control panel	
+  \item Developed the fest registration portal and its admin panel.
   \item Technologies Used - NodeJS, ExpressJS, Angular4, MongoDB.	
 \end{itemize}
 
