@@ -76,7 +76,10 @@ Last Updated on \today
 \color{subheadings}\raggedright\scshape\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont {#1\\}}
 
 % Location command
+\newcommand{\projlink}[1]{
+\color{headings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Light}\fontsize{9pt}{10pt}\selectfont {#1} \normalfont}
+
+% Location command
 \newcommand{\location}[1]{
 \color{headings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
-
 
